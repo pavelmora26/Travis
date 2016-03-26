@@ -11,13 +11,13 @@ before_script:
 after_success:
   - echo $TOTO
   - git remote -v
-  - git config --global user.email "[SET TO YOUR GITHUB EMAIL]"
-  - git config --global user.name "[SET TO YOUR OWN USERNAME FOR GITHUB]"
+  - git config --global user.email "pim3352@g.rit.edu"
+  - git config --global user.name "pavelmora26"
  - git checkout master
  - npm version patch
   - git commit -am "[skip ci] bump version"
  - git log --oneline
-  - git remote set-url origin [SET TO YOUR OWN GITHUB URL]
+  - git remote set-url origin https://github.com/pavelmora26/Travis.git
   - git push origin master
 #  - npm run coverage
 #  - mv coverage/cobertura-coverage.xml shippable/codecoverage/coverage.xml
