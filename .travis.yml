@@ -3,7 +3,7 @@ language: node_js
 
 node_js:
   - 0.10.30
-    
+
 before_script:
  # - npm link
  # - mkdir -p shippable/codecoverage
@@ -13,10 +13,10 @@ after_success:
   - git remote -v
   - git config --global user.email "pim3352@g.rit.edu"
   - git config --global user.name "pavelmora26"
- - git checkout master
- - npm version patch
+  - git checkout master
+  - npm version patch
   - git commit -am "[skip ci] bump version"
- - git log --oneline
+  - git log --oneline
   - git remote set-url origin https://github.com/pavelmora26/Travis.git
   - git push origin master
 #  - npm run coverage
